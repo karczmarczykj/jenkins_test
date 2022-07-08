@@ -4,7 +4,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+                sh 'echo "Hellow World"'
+                sh '''
+                    echo "Multiline shell steps should works too"
+                    ls -lah
+                '''
             }
         }
     }
